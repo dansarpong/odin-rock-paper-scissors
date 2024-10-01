@@ -37,3 +37,25 @@ function getHumanChoice (choice) {
       return 'rock';
   }
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound (humanChoice, computerChoice) {
+  
+  if (humanChoice == 'rock' && computerChoice == 'scissors') {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    humanScore++;
+  } else if (humanChoice == 'paper' && computerChoice == 'rock') {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    humanScore++;
+  } else if (humanChoice == 'scissors' && computerChoice == 'paper') {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    humanScore++;
+  } else if (humanChoice == computerChoice) {
+    console.log(`It's a draw! ${humanChoice} and ${computerChoice} is a tie`);
+  } else {
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    computerScore++;
+  }
+}

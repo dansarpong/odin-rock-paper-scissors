@@ -13,7 +13,9 @@ function getComputerChoice () {
   return 'scissors';
 }
 
-function getHumanChoice (choice) {
+function getHumanChoice () {
+// get the player choice with prompt
+  let choice = prompt('Rock, paper or scissors: ');
 
   switch (choice.toLowerCase()) {
 
